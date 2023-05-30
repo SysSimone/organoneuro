@@ -12,8 +12,7 @@ const Rodape = () => {
     
 <footer className="rodape">
         
-      <section>
-     
+      <section>    
         
         <ul>
           <li>      
