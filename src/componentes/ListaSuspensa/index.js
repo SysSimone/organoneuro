@@ -10,4 +10,4 @@ const ListaSuspensa = ({label, items,  valor, aoAlterado, obrigatorio = false}) 
     </div>)
 }
 
-export default ListaSuspensa
+export default ListaSuspensa;

@@ -4,7 +4,7 @@ import Campo from '../Campo';
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
+const Formulario = ({aoCadastrar, times, aoCriarTime}) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -16,7 +16,7 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
 
     const aoSubmeter = (evento) => {
         evento.preventDefault()
-        console.log('form enviado', nome, cargo, imagem,time )
+        console.log('form enviado', nome, cargo, imagem, time )
         aoCadastrar({
             nome,
             cargo,
@@ -45,16 +45,16 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                     placeholder='Informe o endereço da imagem '
                     aoAlterado={valor => setImagem(valor)}/>
                 <ListaSuspensa 
-                    obrigatorio
+                    obrigatorio={true}
                     label='Times'
                     items={times} 
-                    valor={times}
+                    valor={time}
                     aoAlterado={valor => setTime(valor)}/>
-                <Botao texto='Criar card' />
+                <Botao texto = 'Criar card'/>
             </form>
             <form className="formulario" onSubmit={(evento) => {
               evento.preventDefault()
-              cadastrarTime({ nome: nomeTime, cor: corTime })
+              aoCriarTime({ nome: nomeTime, cor: corTime })
             }}>
               <h2>Preencha os dados para criar um novo time.</h2>
                 <Campo

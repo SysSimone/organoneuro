@@ -5,7 +5,7 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar }) => {
     function favoritar(){
         aoFavoritar(colaborador.id);
     }
-    const propsfavorito = {
+     const propsfavorito = {
         size: 25,
         onClick: favoritar
     }
@@ -15,8 +15,7 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar }) => {
         <AiFillCloseCircle 
         size={25} 
         className="deletar"
-        onClick={() => 
-            aoDeletar(colaborador.id)} 
+        onClick={() => aoDeletar(colaborador.id)} 
         />
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
