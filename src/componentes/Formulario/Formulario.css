@@ -9,8 +9,8 @@
 .formulario-container .formulario {
     background: #F7F7F7;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    flex:1;
     border-radius: 20px;
-    flex: 1;
     padding: 36px 64px;
 }
 .formulario-container .formulario h2 {

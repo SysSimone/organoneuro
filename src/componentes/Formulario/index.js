@@ -4,7 +4,7 @@ import Campo from '../Campo';
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = ({aoCadastrar, times, aoCriarTime}) => {
+const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -54,7 +54,7 @@ const Formulario = ({aoCadastrar, times, aoCriarTime}) => {
             </form>
             <form className="formulario" onSubmit={(evento) => {
               evento.preventDefault()
-              aoCriarTime({ nome: nomeTime, cor: corTime })
+              cadastrarTime({ nome: nomeTime, cor: corTime })
             }}>
               <h2>Preencha os dados para criar um novo time.</h2>
                 <Campo
@@ -66,7 +66,7 @@ const Formulario = ({aoCadastrar, times, aoCriarTime}) => {
                 />
                 <Campo
                     obrigatorio
-                    type='Color'
+                    type='color'
                     label='Cor' 
                     placeholder='Digite a cor do time'
                     valor={corTime}

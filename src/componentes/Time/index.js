@@ -22,7 +22,7 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar }) => {
                 })}
             </div>
         </section>
-
     )
 }
+
 export default Time;
