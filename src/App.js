@@ -274,6 +274,13 @@ function App() {
       imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       time: times[5].nome
     },
+    {
+      id: uuidv4(),
+      nome: 'SIMONE BALZAN',
+      cargo: 'Estudante Front-end Junior',
+      imagem: 'https://github.com/SysSimone.png',
+      time: times[5].nome
+    },
   ]
   const [colaboradores, setColaboradores] = useState(inicial);
 
